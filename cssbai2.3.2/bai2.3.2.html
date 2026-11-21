@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2.3.2 - Menu Ngang Hai Cấp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8fafc;
+        }
+        .navbar {
+            background-color: #0f172a;
+        }
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .menu > li {
+            position: relative;
+        }
+        .menu a {
+            display: block;
+            padding: 14px 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .menu > li:hover > a {
+            background-color: #2563eb;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            min-width: 200px;
+            background-color: #1e293b;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        .submenu li a {
+            padding: 12px 18px;
+            border-bottom: 1px solid #334155;
+        }
+        .submenu li a:hover {
+            background-color: #3b82f6;
+        }
+        .menu > li:hover .submenu {
+            display: block;
+        }
+        .content {
+            padding: 32px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">CSS Cơ bản ▾</a>
+                <ul class="submenu">
+                    <li><a href="#">Selectors & Màu sắc</a></li>
+                    <li><a href="#">Box Model</a></li>
+                    <li><a href="#">Float & Position</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">CSS3 Nâng cao ▾</a>
+                <ul class="submenu">
+                    <li><a href="#">Multi-column</a></li>
+                    <li><a href="#">Transform & Transition</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Thực Hành Menu Ngang Hai Cấp</h1>
+        <p>Di chuột vào mục <strong>CSS Cơ bản</strong> hoặc <strong>CSS3 Nâng cao</strong> để xem menu cấp 2.</p>
+    </div>
+</body>
+</html>
